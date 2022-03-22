@@ -42,6 +42,19 @@ const App = () => {
       {total > 10000 && <p>Voce esta gastando de mais</p>}
     </>
   );
+
+    const obrasFixas = [
+      'Monalisa',
+      'O pensador',
+      'O Grito'
+    ]
+    const obrasVariaveis = [
+      ...obrasFixas,
+      'Santa Ceia',
+      'Abaporou'
+    ]
+
+
 };
 
 export default App;
