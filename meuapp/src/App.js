@@ -1,14 +1,30 @@
 import React from 'react';
 import Footer from './Footer';
 import Header from './Header';
+import Form from './Form/Form';
+
+
+// Props
+const Titulo = ({texto, cor, children})=>{
+  return <h1 style={{color: cor}}>{texto}, {children}</h1>
+}
+
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
-      <h3>Ola mundo</h3>
+      <Form />
       <Footer />
-    </div>
+
+    <Titulo cor="blue" texto="Meu titulo 1"/>
+    <Titulo cor="red" texto="Meu titulo 2"/>
+    <Titulo>
+      <p>azul</p>
+      <p>Felipe Xavier</p>
+    </Titulo>
+
+    </>
   );
 };
 
