@@ -5,14 +5,8 @@ import Input from './Input';
 const form = () => {
   return (
     <form>
-      <p>
-        <label htmlFor="nome">Nome</label>
-        <Input />
-      </p>
-      <p>
-        <label htmlFor="email">email</label>
-        <Input />
-      </p>
+      <Input id="email" label="Email" required />
+      <Input id="senha" label="Senha" type="password" />
       <Button />
     </form>
   );

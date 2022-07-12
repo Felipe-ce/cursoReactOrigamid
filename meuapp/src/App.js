@@ -1,29 +1,25 @@
 import React from 'react';
-import Footer from './Footer';
-import Header from './Header';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Home from './components/Home';
+import Main from './components/Main';
+import Produtos from './components/Produtos';
 import Form from './Form/Form';
 
-
-// Props
-const Titulo = ({texto, cor, children})=>{
-  return <h1 style={{color: cor}}>{texto}, {children}</h1>
-}
-
-
 const App = () => {
+  const { pathname } = window.location;
+
+  let Pagina;
+  if (pathname === '/produtos') {
+    Pagina = Produtos
+  } else {
+    Pagina = Home
+  }
+
   return (
     <>
       <Header />
-      <Form />
-      <Footer />
-
-    <Titulo cor="blue" texto="Meu titulo 1"/>
-    <Titulo cor="red" texto="Meu titulo 2"/>
-    <Titulo>
-      <p>azul</p>
-      <p>Felipe Xavier</p>
-    </Titulo>
-
+      <Pagina />
     </>
   );
 };
